@@ -1,0 +1,11 @@
+[
+  {
+    "nombre": "Serie",
+    "ruta": "/serie"
+  },
+  {
+    "nombre": "Tabs",
+    "ruta": "/tabs"
+  }
+
+]
