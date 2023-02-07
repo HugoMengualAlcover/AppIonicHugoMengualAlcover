@@ -1,0 +1,7 @@
+{
+  "name": "AppIonicHugoMengualAlcover",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
