@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar animated="true" (ionChange)="buscar($event)"></ion-searchbar>
+  <ion-list>
+    <ion-card *ngFor="let s of seriesScroll | filtro: txtSearch: 'nombre': 'sinopsis'">
+      <ion-card-header>
+        {{s.nombre}}
+      </ion-card-header>
+      <ion-img src="{{s.url[0]}}"></ion-img>
+      <ion-card-content class="content">
+        <ion-label >{{s.sinopsis}}</ion-label>
+        <br>
+        <br>
+        <ion-label>Año: {{s.year}}</ion-label>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loading-spinner="crescent"
+      loadingText="Cargando 3 más....">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+
+

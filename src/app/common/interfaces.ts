@@ -8,11 +8,11 @@ export interface Serie{
 
   nombre: string,
   url: String[],
-  categorias: Categorias[],
-  numeroDeCapitulos: number,
-  anyDeEmision: number,
+  numeroCapitulos: number,
+  year: number,
   sinopsis: string,
   puntuacion: Puntuacion[]
+  categorias: string[],
 }
 
 export interface Puntuacion{
@@ -20,7 +20,7 @@ export interface Puntuacion{
   puntuacion: number
 }
 
-export interface Categorias{
+export interface Categoria {
   _id: string,
   nombre: string,
   img: string

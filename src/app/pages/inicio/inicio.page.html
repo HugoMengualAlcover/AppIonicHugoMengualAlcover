@@ -1,15 +1,18 @@
 <app-header></app-header>
 <ion-content class="ion-padding">
-  <ion-card *ngFor="let s of nuevoArray">
+  <ion-card *ngFor="let s of seriesScroll">
     <ion-card-header>
       <ion-title>{{s.nombre}}</ion-title>
     </ion-card-header>
     <ion-img src="{{s.url[0]}}"></ion-img>
     <ion-card-content>
-      <ion-label class=" ion-justify-content-center">{{s.sinopsis}}</ion-label>
+      <ion-label color="danger">Categorias: {{sacarCategorias(s)}}</ion-label>
       <br>
       <br>
-      <ion-label>Año: {{s.anyDeEmision}}</ion-label>
+      <ion-label>{{s.sinopsis}}</ion-label>
+      <br>
+      <br>
+      <ion-label>Año: {{s.year}}</ion-label>
     </ion-card-content>
   </ion-card>
 
