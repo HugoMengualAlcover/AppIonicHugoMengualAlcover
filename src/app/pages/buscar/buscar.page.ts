@@ -26,8 +26,8 @@ export class BuscarPage implements OnInit {
 
   private cargarSeries() {
     this.dataServices.getSeriesBusqueda().subscribe(
-      (s: any[]) => {
-        this.series = s;
+      (data: any[]) => {
+        this.series = data;
       }
     )
   }
@@ -52,5 +52,9 @@ export class BuscarPage implements OnInit {
       this.cont = this.cont+3;
       event.target.complete();
     }, 1500);
+  }
+
+  buscaEnSeries(c: Serie) {
+    this.seriesScroll.push(c);
   }
 }

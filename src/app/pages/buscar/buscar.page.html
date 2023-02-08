@@ -2,7 +2,8 @@
 
 <ion-content class="ion-padding">
   <ion-searchbar animated="true" (ionChange)="buscar($event)"></ion-searchbar>
-  <ion-list>
+  <ion-list *ngFor="let c of series | filtro: txtSearch: 'nombre': 'sinopsis'">
+    {{buscaEnSeries(c)}}
     <ion-card *ngFor="let s of seriesScroll | filtro: txtSearch: 'nombre': 'sinopsis'">
       <ion-card-header>
         {{s.nombre}}
