@@ -55,6 +55,8 @@ export class BuscarPage implements OnInit {
   }
 
   buscaEnSeries(c: Serie) {
+    this.seriesScroll.length = 0;
     this.seriesScroll.push(c);
+    console.log(this.seriesScroll.length);
   }
 }

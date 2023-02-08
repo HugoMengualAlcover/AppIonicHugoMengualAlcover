@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Categoria, Serie} from "../../common/interfaces";
 import {DataService} from "../../services/data.service";
+import {SwiperModule} from "swiper/angular";
 
 @Component({
   selector: 'app-categorias',
@@ -9,7 +10,7 @@ import {DataService} from "../../services/data.service";
 })
 export class CategoriasPage implements OnInit {
 
-  categoriaBuscar: string = '';
+  catABuscar: string = '';
   img: string = '';
   isVisible: boolean = false;
 
@@ -17,10 +18,10 @@ export class CategoriasPage implements OnInit {
   series: Serie[] = [];
   categorias: Categoria[] = [];
 
-  /*slideOpts = {
+  slideOpts = {
     slidesPerView: 3.5, // número de slides visibles
     spaceBetween: 20, // espacio entre los slides
-  };*/
+  };
 
   constructor(private dataService: DataService) { }
 
@@ -51,7 +52,7 @@ export class CategoriasPage implements OnInit {
 
   buscar(categoria: Categoria){
     console.log(categoria);
-    this.categoriaBuscar = categoria.nombre;
+    this.catABuscar = categoria.nombre;
     this.img = categoria.img;
 
     this.dataService.getSerieXCategoria(categoria._id).subscribe(

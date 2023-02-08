@@ -1,9 +1,3 @@
-export interface Componente {
-  nombre: string,
-  anyoCreacion: number,
-  icono: string
-}
-
 export interface Serie{
 
   nombre: string,
