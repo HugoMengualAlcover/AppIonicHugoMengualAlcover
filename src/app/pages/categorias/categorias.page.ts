@@ -19,8 +19,8 @@ export class CategoriasPage implements OnInit {
   categorias: Categoria[] = [];
 
   slideOpts = {
-    slidesPerView: 3.5, // número de slides visibles
-    spaceBetween: 20, // espacio entre los slides
+    slidesPerView: 2.5,
+    spaceBetween: 20,
   };
 
   constructor(private dataService: DataService) { }
@@ -51,11 +51,10 @@ export class CategoriasPage implements OnInit {
 
 
   buscar(categoria: Categoria){
-    console.log(categoria);
     this.catABuscar = categoria.nombre;
-    this.img = categoria.img;
+    this.img = categoria.url;
 
-    this.dataService.getSerieXCategoria(categoria._id).subscribe(
+    this.dataService.getSerieCategoria(categoria._id).subscribe(
       (data : Serie[]) =>
       {
         this.series = data;
@@ -64,4 +63,7 @@ export class CategoriasPage implements OnInit {
     );
   }
 
+  sacarCategorias(s: Serie) {
+
+  }
 }

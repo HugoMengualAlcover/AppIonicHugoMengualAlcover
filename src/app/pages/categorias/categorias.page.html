@@ -1,28 +1,29 @@
-<app-header titulo="Slides de Swiper"></app-header>
-
-
+<app-header></app-header>
 <ion-content class="ion-padding">
-  <swiper [config]="slideOpts" class="padding">
+  <swiper [config]="slideOpts">
     <ng-template *ngFor="let c of categorias" swiperSlide>
-      <ion-avatar (click)="buscar(c);" class="ion-avatar">
-        <ion-img src="{{c.img}}"> </ion-img>
-        <ion-label class="ion-label">{{c.nombre}}</ion-label>
+      <ion-avatar (click)="buscar(c);" >
+        <ion-img src="{{c.url}}"> </ion-img>
+        <ion-label>{{c.nombre}}</ion-label>
       </ion-avatar>
     </ng-template>
   </swiper>
 
 
-  <ion-card  *ngFor="let s of series">
+  <ion-card *ngFor="let s of series">
     <ion-card-header >
-      <ion-row class="row">
-        <ion-avatar [style.display]="isVisible ? 'block':'none'">
-          <ion-img src="{{img}}"> </ion-img>
+      <ion-row>
+        <ion-title>{{s.nombre}}</ion-title>
+        <ion-avatar class="avatarCard" [style.display]="isVisible ? 'block':'none'">
+          <ion-img  src="{{img}}"> </ion-img>
         </ion-avatar>
-        <ion-label class="ion-title ion-justify-content-center">{{s.nombre}}</ion-label>
       </ion-row>
     </ion-card-header>
     <ion-img src="{{s.url[0]}}"></ion-img>
     <ion-card-content>
+      <ion-label class="lbl-categorias">Categorias: {{sacarCategorias(s)}}</ion-label>
+      <br>
+      <br>
       <ion-label>{{s.sinopsis}}</ion-label>
       <br>
       <br>

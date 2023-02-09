@@ -17,6 +17,6 @@ export interface Puntuacion{
 export interface Categoria {
   _id: string,
   nombre: string,
-  img: string
+  url: string
 }
 

@@ -11,11 +11,16 @@ ion-toolbar{
   padding: 5px;
 }
 
-ion-title{
-  background: #3a7be0;
-}
-
 ion-icon{
   width: 40px;
   height: 40px;
+  margin: 5px;
+}
+
+ion-header{
+  background: var(--ion-color-success);
+}
+
+ion-toolbar{
+  color: var(--ion-color-success);
 }

@@ -59,4 +59,8 @@ export class BuscarPage implements OnInit {
     this.seriesScroll.push(c);
     console.log(this.seriesScroll.length);
   }
+
+  sacarCategorias(s: Serie) {
+
+  }
 }

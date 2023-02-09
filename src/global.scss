@@ -26,4 +26,20 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+@import "~swiper/swiper-bundle.css";
+@import '~@ionic/angular/css/ionic-swiper.css';
 
+ion-card{
+  background: var(--ion-color-success-contrast);
+}
+
+ion-card ion-title{
+  font-size: 25px;
+  max-width: 70%;
+  align-self: center;
+  color: var(--ion-color-success);
+}
+
+.lbl-categorias{
+  color: var(--ion-color-danger);
+}

@@ -18,11 +18,6 @@ export class DataService {
       `http://localhost:3000/api/series/serie/${id}`);
   }
 
-  getSeriesBusqueda() : Observable<any[]>{
-    return this.http.get<any[]>(
-      'http://localhost:3000/api/series');
-  }
-
   getCategorias() : Observable<any[]>{
     return this.http.get<any[]>(
       'http://localhost:3000/api/categorias');
@@ -33,7 +28,12 @@ export class DataService {
       `http://localhost:3000/api/categorias/categoria/${id}`);
   }
 
-  getSerieXCategoria(id: String): Observable<any[]>{
+  getSeriesBusqueda() : Observable<any[]>{
+    return this.http.get<any[]>(
+      'http://localhost:3000/api/series');
+  }
+
+  getSerieCategoria(id: String): Observable<any[]>{
     return this.http.get<any[]>(
       `http://localhost:3000/api/series/categoria/${id}`);
   }

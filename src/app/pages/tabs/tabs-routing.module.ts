@@ -16,13 +16,13 @@ const routes: Routes = [
       {
         path: 'inicio',
         loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
-      },/*,
+      },
       {
-        path: 'visualizar-categorias',
-        loadChildren: () => import('../visualizar-categorias/visualizar-categorias.module').then( m => m.VisualizarCategoriasPageModule)
-      },*/
+        path: 'categorias',
+        loadChildren: () => import('../categorias/categorias.module').then( m => m.CategoriasPageModule)
+      },
       {
-        path: 'buscar-series',
+        path: 'buscar',
         loadChildren: () => import('../buscar/buscar.module').then( m => m.BuscarPageModule)
       }
     ]
