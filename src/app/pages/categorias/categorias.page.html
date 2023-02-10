@@ -10,7 +10,7 @@
   </swiper>
 
 
-  <ion-card *ngFor="let s of series">
+  <ion-card *ngFor="let s of seriesScroll">
     <ion-card-header >
       <ion-row>
         <ion-title>{{s.nombre}}</ion-title>
@@ -26,6 +26,12 @@
       <br>
       <ion-label>Año: {{s.year}}</ion-label>
     </ion-card-content>
-
   </ion-card>
+
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loading-spinner="crescent"
+      loadingText="Cargando 3 más....">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
