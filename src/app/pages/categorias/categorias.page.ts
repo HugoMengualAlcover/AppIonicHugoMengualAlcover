@@ -50,20 +50,15 @@ export class CategoriasPage implements OnInit {
   }
 
 
-  buscar(categoria: Categoria){
+  buscar(categoria: Categoria) {
     this.catABuscar = categoria.nombre;
     this.img = categoria.url;
 
     this.dataService.getSerieCategoria(categoria._id).subscribe(
-      (data : Serie[]) =>
-      {
+      (data: Serie[]) => {
         this.series = data;
         this.isVisible = true;
       }
     );
-  }
-
-  sacarCategorias(s: Serie) {
-
   }
 }

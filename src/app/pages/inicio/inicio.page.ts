@@ -31,6 +31,7 @@ export class InicioPage implements OnInit {
         this.ordenar()
       }
     );
+
   }
 
   private ordenar(){
@@ -61,21 +62,6 @@ export class InicioPage implements OnInit {
       this.cont = this.cont+3;
       event.target.complete();
     }, 1500);
-  }
-
-  sacarCategorias(serie: Serie){
-    var c: string = "";
-    /*for (let i = 0; i < serie.categorias.length; i++) {
-      this.dataService.getCategoria(serie.categorias[i]).subscribe(
-        (data : any) =>
-        {
-          c.concat(data.nombre+" ");
-        }
-      );
-    }*/
-
-    return c
-
   }
 
 

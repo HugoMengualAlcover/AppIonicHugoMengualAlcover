@@ -60,7 +60,4 @@ export class BuscarPage implements OnInit {
     console.log(this.seriesScroll.length);
   }
 
-  sacarCategorias(s: Serie) {
-
-  }
 }
