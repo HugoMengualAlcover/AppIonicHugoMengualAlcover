@@ -40,7 +40,7 @@ export class BuscarPage implements OnInit {
 
     console.log('Cargando siguientes...', event);
     setTimeout(() => {
-      if(this.seriesScroll.length > 6){
+      if(this.seriesScroll.length > this.series.length - 3){
         event.target.complete();
         this.infiniteScroll.disabled
         return;
@@ -54,10 +54,16 @@ export class BuscarPage implements OnInit {
     }, 1500);
   }
 
-  buscaEnSeries(c: Serie) {
-    this.seriesScroll.length = 0;
-    this.seriesScroll.push(c);
-    console.log(this.seriesScroll.length);
+
+
+
+  buscaEnSeries(c: Serie, txt: string) {
+    if(txt != ""){
+      this.seriesScroll.length = 0;
+      this.seriesScroll.push(c);
+      console.log(this.seriesScroll.length);
+    }
   }
+
 
 }
