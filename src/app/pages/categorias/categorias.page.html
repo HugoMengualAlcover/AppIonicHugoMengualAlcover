@@ -2,7 +2,7 @@
 <ion-content class="ion-padding">
   <swiper [config]="slideOpts">
     <ng-template *ngFor="let c of categorias" swiperSlide>
-      <ion-avatar (click)="buscar(c);" >
+      <ion-avatar (click)="clickCategoria(c);" >
         <ion-img src="{{c.url}}"> </ion-img>
         <ion-label>{{c.nombre}}</ion-label>
       </ion-avatar>

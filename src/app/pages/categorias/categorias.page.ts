@@ -60,7 +60,7 @@ export class CategoriasPage implements OnInit {
 
     console.log('Cargando siguientes...', event);
     setTimeout(() => {
-      if(this.seriesScroll.length > this.series.length){
+      if(this.seriesScroll.length > this.series.length - 3){
         event.target.complete();
         this.infiniteScroll.disabled
         return;
@@ -75,7 +75,7 @@ export class CategoriasPage implements OnInit {
   }
 
 
-  buscar(categoria: Categoria) {
+  clickCategoria(categoria: Categoria) {
     this.catABuscar = categoria.nombre;
     this.img = categoria.url;
 

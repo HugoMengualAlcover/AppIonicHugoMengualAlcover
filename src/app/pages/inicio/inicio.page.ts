@@ -50,7 +50,7 @@ export class InicioPage implements OnInit {
 
     console.log('Cargando siguientes...', event);
     setTimeout(() => {
-      if(this.seriesScroll.length > 6){
+      if(this.seriesScroll.length > this.series.length - 3){
         event.target.complete();
         this.infiniteScroll.disabled
         return;
