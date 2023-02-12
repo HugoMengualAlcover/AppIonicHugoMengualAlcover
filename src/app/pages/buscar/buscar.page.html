@@ -6,9 +6,9 @@
     <p *ngFor="let c of series | filtro: txtSearch: 'nombre': 'sinopsis'">
       {{buscaEnSeries(c, txtSearch)}}
     </p>
-    <ion-card *ngFor="let s of seriesScroll | filtro: txtSearch: 'nombre': 'sinopsis'">
+    <ion-card *ngFor="let s of seriesScroll | filtro: txtSearch: 'nombre': 'sinopsis'" [routerLink]="['/tabs/serie',s._id]">
       <ion-card-header>
-        <ion-title>{{s.nombre}}</ion-title>
+        <ion-card-title>{{s.nombre}}</ion-card-title>
       </ion-card-header>
       <ion-img src="{{s.url[0]}}"></ion-img>
       <ion-card-content class="content">

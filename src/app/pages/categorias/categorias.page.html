@@ -10,10 +10,10 @@
   </swiper>
 
 
-  <ion-card *ngFor="let s of seriesScroll">
+  <ion-card *ngFor="let s of seriesScroll" [routerLink]="['/tabs/serie',s._id]">
     <ion-card-header >
       <ion-row>
-        <ion-title>{{s.nombre}}</ion-title>
+        <ion-card-title>{{s.nombre}}</ion-card-title>
         <ion-avatar class="avatarCard" [style.display]="isVisible ? 'block':'none'">
           <ion-img  src="{{img}}"> </ion-img>
         </ion-avatar>

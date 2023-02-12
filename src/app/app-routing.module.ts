@@ -10,20 +10,7 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
-  },  {
-    path: 'buscar',
-    loadChildren: () => import('./pages/buscar/buscar.module').then( m => m.BuscarPageModule)
   },
-  {
-    path: 'categorias',
-    loadChildren: () => import('./pages/categorias/categorias.module').then( m => m.CategoriasPageModule)
-  },
-  {
-    path: 'serie',
-    loadChildren: () => import('./pages/serie/serie.module').then( m => m.SeriePageModule)
-  },
-
-
 ];
 
 @NgModule({

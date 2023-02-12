@@ -1,5 +1,5 @@
 export interface Serie{
-
+  _id: string,
   nombre: string,
   url: String[],
   numeroCapitulos: number,

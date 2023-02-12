@@ -54,9 +54,6 @@ export class BuscarPage implements OnInit {
     }, 1500);
   }
 
-
-
-
   buscaEnSeries(c: Serie, txt: string) {
     if(txt != ""){
       this.seriesScroll.length = 0;

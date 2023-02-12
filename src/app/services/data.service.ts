@@ -13,9 +13,14 @@ export class DataService {
   getSeries(): Observable<Serie[]>{
     return this.http.get<Serie[]>('http://localhost:3000/api/series');
   }
-  getSerie(id: String): Observable<any[]>{
-    return this.http.get<any[]>(
+  getSerie(id: String): Observable<any>{
+    return this.http.get<any>(
       `http://localhost:3000/api/series/serie/${id}`);
+  }
+
+  updateSerie(id: String, serie: Serie): Observable<any>{
+    return this.http.put(
+      `http://localhost:3000/api/series/update/${id}`,serie);
   }
 
   getCategorias() : Observable<any[]>{
@@ -23,8 +28,8 @@ export class DataService {
       'http://localhost:3000/api/categorias');
   }
 
-  getCategoria(id: String): Observable<any[]>{
-    return this.http.get<any[]>(
+  getCategoria(id: String): Observable<any>{
+    return this.http.get<any>(
       `http://localhost:3000/api/categorias/categoria/${id}`);
   }
 

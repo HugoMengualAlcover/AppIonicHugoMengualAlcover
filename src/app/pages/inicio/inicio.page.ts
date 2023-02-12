@@ -29,9 +29,9 @@ export class InicioPage implements OnInit {
       {
         this.series = data;
         this.ordenar()
+
       }
     );
-
   }
 
   private ordenar(){

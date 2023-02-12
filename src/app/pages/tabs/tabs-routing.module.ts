@@ -24,6 +24,10 @@ const routes: Routes = [
       {
         path: 'buscar',
         loadChildren: () => import('../buscar/buscar.module').then( m => m.BuscarPageModule)
+      },
+      {
+        path: 'serie/:id',
+        loadChildren: () => import('../serie/serie.module').then( m => m.SeriePageModule)
       }
     ]
   }
