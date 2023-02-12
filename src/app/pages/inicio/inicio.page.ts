@@ -15,11 +15,13 @@ export class InicioPage implements OnInit {
   series: Serie[] =[];
   seriesScroll: Serie[] = [];
   cont: number = 0;
+  private categoriasList: Categoria[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.cargarSeries();
+    this.cargarCategorias();
     this.loadData(event);
   }
 
@@ -64,5 +66,24 @@ export class InicioPage implements OnInit {
     }, 1500);
   }
 
+  nomCategoria(cat: string[]){
+    var nomCats: string = "";
+    for (let i = 0; i < cat.length; i++) {
+      for (let j = 0; j < this.categoriasList.length; j++) {
+        if (cat[i] == this.categoriasList[j]._id){
+          nomCats = nomCats+(this.categoriasList[j].nombre)+" "
+        }
+      }
+    }
+    return nomCats
+  }
+
+  private cargarCategorias(){
+    this.dataService.getCategorias().subscribe(
+      (data: Categoria[]) => {
+        this.categoriasList = data;
+      }
+    )
+  }
 
 }
